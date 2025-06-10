@@ -1,0 +1,281 @@
+/* Importamos las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:wght@400;700&display=swap');
+
+/* --- Variables de Color y Reseteo Básico --- */
+:root {
+    --color-fondo: #1a1a2e; /* Azul noche oscuro */
+    --color-tarjeta: #16213e; /* Azul más oscuro */
+    --color-texto: #e94560;  /* Rosa/Rojo vibrante para acentos */
+    --color-texto-base: #dcdcdc; /* Gris claro para texto normal */
+    --fuente-titulo: 'Press Start 2P', cursive;
+    --fuente-cuerpo: 'Source Code Pro', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Estilos Generales del Body --- */
+body {
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-cuerpo);
+    color: var(--color-texto-base);
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+/* --- Cabecera Principal --- */
+.main-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.main-header h1 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-texto);
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 0px #0f3460;
+    margin-bottom: 0.5rem;
+}
+
+.main-header .subtitle {
+    font-size: 1.1rem;
+    color: #a7a7a7;
+}
+
+/* --- Cuadrícula de Juegos --- */
+.game-grid {
+    display: grid;
+    /* Crea columnas responsivas: se ajustan automáticamente al tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Tarjetas de Juego --- */
+.game-card {
+    background: var(--color-tarjeta);
+    border: 2px solid #0f3460;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0; /* Inicia invisible para la animación */
+}
+
+/* Animación para que las tarjetas aparezcan una por una */
+.game-card:nth-child(1) { animation-delay: 0.1s; }
+.game-card:nth-child(2) { animation-delay: 0.2s; }
+.game-card:nth-child(3) { animation-delay: 0.3s; }
+.game-card:nth-child(4) { animation-delay: 0.4s; }
+.game-card:nth-child(5) { animation-delay: 0.5s; }
+.game-card:nth-child(6) { animation-delay: 0.6s; }
+
+.game-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(233, 69, 96, 0.3);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    filter: saturate(0.8);
+    transition: filter 0.3s ease;
+}
+
+.game-card:hover img {
+    filter: saturate(1.2);
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Hace que este contenedor crezca para empujar el botón hacia abajo */
+}
+
+.card-content h2 {
+    color: var(--color-texto);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    flex-grow: 1; /* Empuja el botón al final de la tarjeta */
+    margin-bottom: 1.5rem;
+}
+
+/* --- Botón de Jugar --- */
+.play-button {
+    display: inline-block;
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    font-family: var(--fuente-cuerpo);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Se alinea a la izquierda */
+}
+
+.play-button:hover {
+    background-color: #ff718e;
+    transform: scale(1.05);
+}
+
+/* Estilo especial para la tarjeta "Próximamente" */
+.coming-soon {
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-tarjeta),
+        var(--color-tarjeta) 10px,
+        #1f2a47 10px,
+        #1f2a47 20px
+    );
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* --- Pie de Página --- */
+.main-footer {
+    text-align: center;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed #0f3460;
+    color: #a7a7a7;
+    font-size: 0.9rem;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Estilos Adicionales para el Juego de Memorama --- */
+
+.game-info-panel {
+    max-width: 800px;
+    margin: -1rem auto 2rem auto;
+    background-color: var(--color-tarjeta);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 2px solid #0f3460;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.info-item h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-texto);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-family: var(--fuente-cuerpo);
+    color: var(--color-texto-base);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.memory-game-board {
+    max-width: 800px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1.5rem;
+    perspective: 1000px; /* Para el efecto 3D de volteo */
+}
+
+.memory-card {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #0f3460;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta la cara trasera del elemento */
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-face {
+    background: #e94560; /* Color de acento */
+    transform: rotateY(180deg);
+}
+
+.front-face img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.back-face {
+    background: var(--color-tarjeta);
+    font-family: var(--fuente-titulo);
+    color: var(--color-texto);
+    font-size: 2rem;
+    /* Texto de la parte trasera de la tarjeta */
+    content: "?"; 
+}
+
+.back-face::before {
+    content: '?';
+}
+
+
+.game-controls {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.game-controls .play-button {
+    margin: 0 1rem;
+}
