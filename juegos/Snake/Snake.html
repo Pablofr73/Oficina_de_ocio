@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpiente de KPIs - Oficina de Ocio</title>
+    <link rel="stylesheet" href="../../style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>// Serpiente de KPIs</h1>
+        <p class="subtitle">Evita la burocracia y cumple tus objetivos.</p>
+    </header>
+
+    <main>
+        <div class="game-info-panel">
+            <div class="info-item">
+                <h3>KPIs Logrados</h3>
+                <p id="score-count">0</p>
+            </div>
+        </div>
+
+        <div class="snake-game-container">
+            <canvas id="snake-canvas"></canvas>
+            <div id="game-overlay">
+                <p>Usa las flechas o WASD para moverte</p>
+                <button id="start-button" class="play-button">▶ Iniciar Tarea</button>
+            </div>
+        </div>
+        <div class="game-controls">
+            <a href="../../index.html" class="play-button">◀ Volver al Menú</a>
+        </div>
+        </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Oficina de Ocio. Todos los derechos reservados (para procrastinar).</p>
+        <p>Un producto de "Pausa Activa Inc."</p>
+    </footer>
+
+    <script src="Snake.js"></script>
+</body>
+</html>
