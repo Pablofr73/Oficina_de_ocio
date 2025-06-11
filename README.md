@@ -6,7 +6,7 @@
 
 ## 🇺🇸 English
 
-**Oficina de Ocio** is a browser-based game project designed to bring humor and fun into office spaces everywhere. Inspired by the charm of old-school Flash games, it aims to deliver a lighthearted experience for short breaks at work, try [here](https://pablofr73.github.io/Oficina_de_ocio/juegos/Snake/Snake.html).
+**Oficina de Ocio** is a browser-based game project designed to bring humor and fun into office spaces everywhere. Inspired by the charm of old-school Flash games, it aims to deliver a lighthearted experience for short breaks at work, try [here](https://pablofr73.github.io/Oficina_de_ocio/).
 
 ### 🎮 What's Included?
 The arcade currently features two simple games:
@@ -39,7 +39,7 @@ If you have questions, suggestions, or want to contribute, feel free to reach ou
 
 ## 🇪🇸 Español
 
-**Oficina de Ocio** es un proyecto de juegos web pensado para agregar un poco de humor y diversión a las oficinas del mundo. Inspirado en los antiguos juegos Flash, busca ofrecer un ambiente cómico y relajado directamente desde el navegador, prueba [aqui](https://pablofr73.github.io/Oficina_de_ocio/juegos/Snake/Snake.html).
+**Oficina de Ocio** es un proyecto de juegos web pensado para agregar un poco de humor y diversión a las oficinas del mundo. Inspirado en los antiguos juegos Flash, busca ofrecer un ambiente cómico y relajado directamente desde el navegador, prueba [aqui](https://pablofr73.github.io/Oficina_de_ocio/).
 
 ### 🎮 ¿Qué incluye?
 Actualmente el proyecto cuenta con dos juegos sencillos:
