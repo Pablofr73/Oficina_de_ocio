@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         tail: new Image()
     };
     snakeImages.head.src = '/Oficina_de_ocio/juegos/Snake/img/Cabeza.png';
-    snakeImages.head.src = '/Oficina_de_ocio/juegos/Snake/img/Cuerpo.png';
-    snakeImages.head.src = '/Oficina_de_ocio/juegos/Snake/img/Cola.png';
+    snakeImages.body.src = '/Oficina_de_ocio/juegos/Snake/img/Cuerpo.png';
+    snakeImages.tail.src = '/Oficina_de_ocio/juegos/Snake/img/Cola.png';
 
     const foodImages = [];
     for (let i = 1; i <= 5; i++) {
