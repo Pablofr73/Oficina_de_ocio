@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         body: new Image(),
         tail: new Image()
     };
-    snakeImages.head.src = 'img/cabeza.png';
-    snakeImages.body.src = 'img/cuerpo.png';
-    snakeImages.tail.src = 'img/cola.png';
+    snakeImages.head.src = 'img/Cabeza.png';
+    snakeImages.body.src = 'img/Cuerpo.png';
+    snakeImages.tail.src = 'img/Cola.png';
 
     const foodImages = [];
     for (let i = 1; i <= 5; i++) {
