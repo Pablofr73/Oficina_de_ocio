@@ -21,8 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     snakeImages.body.src = '/Oficina_de_ocio/juegos/Snake/img/Cuerpo.png';
     snakeImages.tail.src = '/Oficina_de_ocio/juegos/Snake/img/Cola.png';
 
+    // snakeImages.head.src = 'img/Cabeza.png';
+    // snakeImages.body.src = 'img/Cuerpo.png';
+    // snakeImages.tail.src = 'img/Cola.png';
+
     const foodImages = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 7; i++) {
         const foodImg = new Image();
         foodImg.src = `img/${i}.png`;
         foodImages.push(foodImg);
@@ -169,13 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function changeDirection(e) {
-        const keyPressed = e.key.toLowerCase(); // Convertir a minúscula para 'W,A,S,D'
+        const keyPressed = e.key.toLowerCase();
         const goingUp = direction.y === -1;
         const goingDown = direction.y === 1;
         const goingRight = direction.x === 1;
         const goingLeft = direction.x === -1;
 
-        // =====> MEJORA: Añadidos los controles WASD
+        // Añadidos los controles WASD
         if (['arrowup', 'w'].includes(keyPressed) && !goingDown) {
             direction = { x: 0, y: -1 };
         }
